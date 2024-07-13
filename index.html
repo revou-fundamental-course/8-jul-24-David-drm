@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS/stle.css"
   </head>
+
   <body>
     <!-- Main Title -->
     <header class="main-title">
@@ -28,7 +29,7 @@
             <div class="input-title">
                 <h3>Jenis Kelamin</h3>
             </div>
-            <div>
+            <div class="gender">
               <input type="radio" id="section-male" /><label for="section-male"
                 >Laki-Laki</label
               >
@@ -52,8 +53,8 @@
               <input type="number" id="input-tinggi_badan" />
             </div>
             <div>
-              <button class="button-submit">Submit</button>
-              <button class="button-reset">Reset</button>
+              <button type="submit" class="button" id="submit">Hitung BMI</button>
+              <button type="reset" class="button" id="reset">Reset</button>
             </div>
           </form>
         </section>
@@ -64,8 +65,9 @@
             <h2>Keunggulan Fitur</h2>
           </header>
 
+      <section>
           <article>
-            <ol>
+            <ol class="list-keunggulan">
               <li>Menghitung berat badan</li>
               <li>Menentukan kategori berat badan ideal atau tidak</li>
               <li>Mempersiapkan program penurunan berat badan</li>
