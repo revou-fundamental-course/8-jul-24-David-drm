@@ -1,13 +1,13 @@
 function BMI(){
 // Declaration:      
-const hasilKualitas = document.getElementById('hasilKualitas');
-const angkaBMI = document.getElementById('angkaBMI');
-const hasilInfo = document.getElementById('hasilInfo');
+const hasilKualitas = document.getElementById('hasilkualitas');
+const angkaBMI = document.getElementById('angka-bmi');
+const hasilInfo = document.getElementById('hasil-info');
 const tinggi = parseFloat(document.getElementById('inputTinggi').value)/100;
 const beratBadan = parseFloat(document.getElementById('inputBerat').value);
-const rentangBMI = document.getElementById('rentangBMI');
+const rentangBMI = document.getElementById('rentang-bmi');
 const penjelasan = document.getElementById('more-info');
-const titleResiko = document.getElementById('titleResiko');
+const titleResiko = document.getElementById('title-resiko');
 const resiko1 = document.getElementById('resiko1');
 const resiko2 = document.getElementById('resiko2');
 const resiko3 = document.getElementById('resiko3');
@@ -20,10 +20,10 @@ generalInfo.classList.toggle("show");
 // Hitung nilai BMI
 let hasilBMI = beratBadan / (tinggi * tinggi);
 
-// Bulatkan hasilBMI menjadi dua digit desimal
+// Membulatkan hasilBMI menjadi dua digit desimal
 let bmiDuaDigit = hasilBMI.toFixed(1);
 
-//Main Function;
+//Main Function
     if(hasilBMI < 18.5){
         hasilKualitas.innerHTML = "Berat Badan Kurang"
         angkaBMI.innerHTML = bmiDuaDigit;
