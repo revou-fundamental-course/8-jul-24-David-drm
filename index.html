@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/stle.css"
+    <link rel="stylesheet" href="CSS/stle.css">
+    <script src="JS/script.js"></script>
   </head>
 
   <body>
@@ -25,22 +26,22 @@
 
         <!-- Form -->
         <section>
-          <form>
+          <form id="bmiForm">
             <div class="input-title">
                 <h3>Jenis Kelamin</h3>
             </div>
             <div class="gender">
-              <input type="radio" id="section-male" /><label for="section-male"
+              <input type="radio" id="section-male" name="gender" required/><label for="section-male"
                 >Laki-Laki</label
               >
-              <input type="radio" id="section-female" /><label
+              <input type="radio" id="section-female" name="gender" required/><label
                 for="section-female"
                 >Perempuan</label
               >
             </div>
             <div>
-              <label for="input-berat_badan">Berat Badan (Kg)</label>
-              <input type="number" id="input-berat_badan" />
+              <label for="inputBerat">Berat Badan (Kg)</label>
+              <input type="number" id="inputBerat" name="weight" required/>
             </div>
 
             <div>
@@ -49,11 +50,11 @@
             </div>
 
             <div>
-              <label for="input-tinggi_badan">Tinggi Badan (cm)</label>
-              <input type="number" id="input-tinggi_badan" />
+              <label for="inputTinggi">Tinggi Badan (cm)</label>
+              <input type="number" id="inputTinggi" name="height" required/>
             </div>
             <div>
-              <button type="submit" class="button" id="submit">Hitung BMI</button>
+              <button type="button" class="button" id="submit" onclick="BMI()">Hitung BMI</button>
               <button type="reset" class="button" id="reset">Reset</button>
             </div>
           </form>
@@ -82,22 +83,40 @@
       <section class="main-content">
         <!-- Result Article -->
         <article>
-          <h1>Result</h1>
+          <h1>Hasil</h1>
         </article>
 
         <!-- Result Section -->
         <section class="result-section">
-            <p>Hasil Result Adalah: </p>
-
-            <h2>24.7</h2>
-            <p>Anda Memiliki Berat Badan Berlebih</p>
+            <h4 id="hasilKualitas">Hasil BMI Adalah: </h4>
+            <h2 id="angkaBMI"></h2>
+            <p id="hasilInfo"></p>
+            <button type="button" class="button">Download Hasil BMI</button>
         </section>
 
         <!-- Result Article -->
-        <article></article>
+        <article>
+          <p id="rentangBMI">Hasil BMI: </p>
+          <p id="more-info"></p>
+            
+          <button class="button"><a href="https://play.google.com/store/apps/details?id=com.rsmurniteguh.mobileapps.droid" target="_blank">Konsultasi Ahli Gizi Via Aplikasi</a></button>
+          <button class="button"><a href="https://www.rsmurniteguh.com/id/Entity?type=ONLINE_APPOINTMENT&poly=PSBSGK" target="_blank">Registrasi Online Ahli Gizi</a></button>
+
+          <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+        </article>
 
         <!-- General Information -->
-        <section></section>
+        <section class="general-info show">
+          <h4 id="titleResiko">Info Lebih Lanjut:</h4>
+          <ol class="no-numbers">
+            <li id="resiko1"></li>
+            <li id="resiko2"></li>
+            <li id="resiko3"></li>
+            <li id="resiko4"></li>
+          </ol>
+          <button class="button"><a href="https://play.google.com/store/apps/details?id=com.rsmurniteguh.mobileapps.droid" target="_blank">Konsultasi Dokter Via Aplikasi</a></button>
+          <button class="button"><a href="https://www.rsmurniteguh.com/id/Entity?type=ONLINE_APPOINTMENT&poly=PSBUMU" target="_blank">Registrasi Online Sekarang</a></button>
+        </section>
       </section>
     </main>
   </body>
