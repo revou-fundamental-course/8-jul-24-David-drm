@@ -17,13 +17,13 @@ const resiko4 = document.getElementById('resiko4');
 let generalInfo = document.querySelector(".general-info");
 generalInfo.classList.toggle("show");
 
-//Main Function;
 // Hitung nilai BMI
 let hasilBMI = beratBadan / (tinggi * tinggi);
 
 // Bulatkan hasilBMI menjadi dua digit desimal
 let bmiDuaDigit = hasilBMI.toFixed(1);
 
+//Main Function;
     if(hasilBMI < 18.5){
         hasilKualitas.innerHTML = "Berat Badan Kurang"
         angkaBMI.innerHTML = bmiDuaDigit;
